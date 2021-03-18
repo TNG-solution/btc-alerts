@@ -13,3 +13,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar {
+  background-color: #131127;
+}
+
+.nav-item {
+  color: #efb810;
+  font-size: 17px;
+}
+
+.nav-item:hover {
+  color: #efb810;
+}
+
+#start_button {
+  color: #131127;
+  background-color: #efb810;
+  font-size: 15px;
+  font-weight: bold;
+  height: auto;
+  width: auto;
+}
