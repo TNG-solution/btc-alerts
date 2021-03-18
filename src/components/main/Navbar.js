@@ -7,7 +7,7 @@ import btcAlerts from '../../images/logo.png';
 const Navbar = () => {
   return ( 
     <div>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg fixed-top">
         <Link to={"/"} className="nav-item nav-link">
           <img src={btcAlerts} alt="Btc alerts logo" className="mr-3" height="35"/>
         </Link>
