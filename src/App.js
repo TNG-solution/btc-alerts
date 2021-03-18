@@ -5,8 +5,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 // Components
 import Navbar from './components/main/Navbar';
-import Landing from './components/main/Landing';
-import Btc from './components/components/Btc';
+import Main from './components/main';
+import Btc from './components/common/Btc';
+import Footer from './components/main/Footer';
 
 // Redux
 import {Provider} from 'react-redux';
@@ -20,12 +21,12 @@ function App() {
 
         <div>
           <Switch>
-            <Route exact path="/" component={Landing}/>
+            <Route exact path="/" component={Main}/>
             <Route exact path="/bitcoin_price" component={Btc}/>
           </Switch>
         </div>
 
-        {/* TODO: make footer */}
+        <Footer/>
       </Provider>
     </Router>
   );
