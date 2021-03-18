@@ -7,10 +7,10 @@ import landing from '../../images/landing-img.svg';
 
 const Landing = () => {
   return ( 
-    <div className="m-5 row align-items-center">
-      <div className="col ">
+    <div className="row align-items-center vh-100">
+      <div className="col">
         <h3>Recibe alertas</h3>
-        <h1 className="font-weight-bold" style={{fontSize: "65px"}}>Seguras y confiables</h1>
+        <h1 className="font-weight-bold" style={{fontSize: "75px"}}>Seguras y confiables</h1>
         <br/>
         <h5>Conocerás el tiempo indicado para saber cuando vender o comprar bitcoin.</h5>
         <br/><br/><br/>
