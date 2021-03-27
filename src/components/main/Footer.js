@@ -7,6 +7,14 @@ import { Facebook, Twitter, Instagram } from '@material-ui/icons';
 import tng from '../../images/tng-logo.png';
 
 const Footer = () => {
+
+  const changePage = (e) => {
+    e.preventDefault();
+
+    window.location.href = '/maintenance';
+  }
+
+
   return ( 
     <div className="footer">
       <div className="container d-flex flex-row justify-content-between align-items-center footer-links pt-4">
@@ -26,17 +34,17 @@ const Footer = () => {
         <div className="footer-section">
           <span className="footer-header"><strong>¿Quiénes somos?</strong></span>
           <div className="footer-content">
-            <a href="true" onClick={e=>e.preventDefault()}>Nosotros</a>
-            <a href="true" onClick={e=>e.preventDefault()}>Antes de que te vayas</a>
-            <a href="true" onClick={e=>e.preventDefault()}>FAQ</a>
+            <a href="true" onClick={changePage}>Nosotros</a>
+            <a href="true" onClick={changePage}>Antes de que te vayas</a>
+            <a href="true" onClick={changePage}>FAQ</a>
           </div>
         </div>
         <div className="footer-section">
           <span className="footer-header"><strong>Legal</strong></span>
           <div className="footer-content">
-            <a href="true" onClick={e=>e.preventDefault()}>Términos y condiciones</a>
-            <a href="true" onClick={e=>e.preventDefault()}>Aviso de arivacidad</a>
-            <a href="true" onClick={e=>e.preventDefault()}>Aviso de cookies</a>
+            <a href="true" onClick={changePage}>Términos y condiciones</a>
+            <a href="true" onClick={changePage}>Aviso de arivacidad</a>
+            <a href="true" onClick={changePage}>Aviso de cookies</a>
           </div>
         </div>
       </div>
