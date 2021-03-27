@@ -19,7 +19,7 @@ function App() {
       <Provider store={store}>
         <Navbar/>
 
-        <div>
+        <div className="m-5">
           <Switch>
             <Route exact path="/" component={Main}/>
             <Route exact path="/bitcoin_price" component={Btc}/>
