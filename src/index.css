@@ -27,6 +27,13 @@ code {
   color: #efb810;
 }
 
+#title {
+  color: #efb810;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 5%;
+}
+
 #start_button {
   color: #131127;
   background-color: #efb810;
@@ -34,4 +41,9 @@ code {
   font-weight: bold;
   height: auto;
   width: auto;
+}
+
+
+#btc-chart {
+  height: 500px;
 }
