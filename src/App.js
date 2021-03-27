@@ -8,6 +8,7 @@ import Navbar from './components/main/Navbar';
 import Main from './components/main';
 import Btc from './components/common/Btc';
 import Footer from './components/main/Footer';
+import Maintenance from './components/main/Maintenance';
 
 // Redux
 import {Provider} from 'react-redux';
@@ -23,6 +24,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Main}/>
             <Route exact path="/bitcoin_price" component={Btc}/>
+            <Route exact path="/maintenance" component={Maintenance}/>
           </Switch>
         </div>
 
