@@ -6,7 +6,7 @@ import Landing from './main/Landing';
 
 const Main = () => {
   return ( 
-    <div className="m-5">
+    <div>
       <Landing/>
       <HowItWorks/>
     </div>
