@@ -16,7 +16,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link mr-4" href="#hworks">Como funciona</a>
+            <a className="nav-item nav-link mr-4" href="/#hworks">Como funciona</a>
             <Link className="nav-item nav-link mr-4" to={"/bitcoin_price"}>Comenzar</Link>
           </div>
         </div>
