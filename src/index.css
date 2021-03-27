@@ -41,12 +41,15 @@ code {
 #start_button {
   color: #131127;
   background-color: #efb810;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   height: auto;
   width: auto;
 }
 
+#link {
+  color: #efb810;
+}
 
 #btc-chart {
   height: 500px;
