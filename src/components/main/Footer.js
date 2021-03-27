@@ -1,5 +1,9 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram } from '@material-ui/icons'
+
+// Material UI Icons
+import { Facebook, Twitter, Instagram } from '@material-ui/icons';
+
+// Images
 import tng from '../../images/tng-logo.png';
 
 const Footer = () => {
@@ -12,7 +16,7 @@ const Footer = () => {
             <p>Mexico City</p>
             <p>contact@tngsolution.com</p>
             <p>(+52) 56 1151 7829</p>
-            <a id="link" href="tngsolution.com" className="link border-animation">
+            <a href="tngsolution.com" className="link border-animation">
               <div className="border-animation-inner">
                 www.tngsolution.com
               </div> 
@@ -22,17 +26,17 @@ const Footer = () => {
         <div className="footer-section">
           <span className="footer-header"><strong>¿Quiénes somos?</strong></span>
           <div className="footer-content">
-            <a id="link" href="true" onClick={e=>e.preventDefault()}>Nosotros</a> <br/>
-            <a id="link" href="true" onClick={e=>e.preventDefault()}>Antes de que te vayas</a> <br/>
-            <a id="link" href="true" onClick={e=>e.preventDefault()}>FAQ</a>
+            <a href="true" onClick={e=>e.preventDefault()}>Nosotros</a>
+            <a href="true" onClick={e=>e.preventDefault()}>Antes de que te vayas</a>
+            <a href="true" onClick={e=>e.preventDefault()}>FAQ</a>
           </div>
         </div>
         <div className="footer-section">
           <span className="footer-header"><strong>Legal</strong></span>
           <div className="footer-content">
-            <a id="link" href="true" onClick={e=>e.preventDefault()}>Términos y condiciones</a> <br/>
-            <a id="link" href="true" onClick={e=>e.preventDefault()}>Aviso de arivacidad</a> <br/>
-            <a id="link" href="true" onClick={e=>e.preventDefault()}>Aviso de cookies</a>
+            <a href="true" onClick={e=>e.preventDefault()}>Términos y condiciones</a>
+            <a href="true" onClick={e=>e.preventDefault()}>Aviso de arivacidad</a>
+            <a href="true" onClick={e=>e.preventDefault()}>Aviso de cookies</a>
           </div>
         </div>
       </div>
@@ -42,7 +46,7 @@ const Footer = () => {
           <div className="d-flex justify-content-center">
             <Facebook className="mr-1 social-media"/>
             <Instagram className="mx-1 social-media"/>
-            <Twitter  className="ml-1 social-media"/>
+            <Twitter className="ml-1 social-media"/>
           </div>
         </div>
       </div>

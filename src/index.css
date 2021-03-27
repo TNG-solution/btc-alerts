@@ -47,3 +47,65 @@ code {
 #btc-chart {
   height: 500px;
 }
+
+.footer {
+  background-color: #06031f;
+  padding: 15px;
+  padding-top: 25px;
+  height: 35vh;
+}
+
+.footer-links {
+  height: 25vh;
+  margin-bottom: 1vh;
+}
+
+.footer-copyright {
+  height: 7vh;
+}
+
+.footer-section {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 23vh;
+}
+
+.footer-section span {
+  font-size: 18px;
+}
+
+.footer-section .link {
+  color: #efb810;
+}
+
+.footer-header {
+  min-height: 45px;
+}
+
+.footer-content {
+  min-height: 18vh;
+  margin-top: 15px;
+}
+
+.footer-content p, .footer-copyright .in p {
+  color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
+.footer-content a {
+  color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
+.footer-content a:hover {
+  color: #efb810;
+  text-decoration: none;
+}
