@@ -2,6 +2,10 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
+// Packages
+import { motion } from 'framer-motion';
+
+// Images
 import btcAlerts from '../../images/logo.png';
 
 const Navbar = () => {
@@ -16,8 +20,8 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-item nav-link mr-4" href="/#hworks">Como funciona</a>
-            <Link className="nav-item nav-link mr-4" to={"/bitcoin_price"}>Comenzar</Link>
+            <motion.a className="nav-item nav-link mr-4" href="/#hworks" whileHover={{ scale: 1.1 }}>Como funciona</motion.a>
+            <motion.a className="nav-item nav-link mr-4" href="/bitcoin_price" whileHover={{ scale: 1.1 }}>Comenzar</motion.a>
           </div>
         </div>
       </nav>
