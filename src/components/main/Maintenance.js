@@ -10,7 +10,7 @@ const Maintenance = () => {
         <h1 className="font-weight-bold" style={{fontSize: "75px"}}>Página en mantenimiento</h1>
         <br/>
         <h5 className="font-weight-normal">
-          Diculpe, actualmente estamos trabajando en este momento, vuelva pronto.
+          Diculpe la molestia, actualmente estamos trabajando para reestablecer este serviio, vuelva pronto.
         </h5>
         <br/><br/><br/>
       </div>
