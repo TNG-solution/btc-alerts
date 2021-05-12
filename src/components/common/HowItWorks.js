@@ -1,121 +1,76 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+// Packages
+import { motion } from 'framer-motion';
 
 // Material UI
-import clsx from 'clsx';
-import { Grid, Card, IconButton, CardMedia, CardContent, Typography, CardActions, Collapse } from '@material-ui/core';
+import { Grid, Card, CardMedia, CardContent, Typography } from '@material-ui/core';
 import { workStyles } from '../../styles';
 
-// Material UI Icons
-import { ExpandMore } from '@material-ui/icons';
-
 // Images
-import img1 from '../../images/test.png'
+import python from '../../images/python-script.png';
+import web from '../../images/web-page.svg';
+import monitor from '../../images/monitor.png';
 
 const HowItWorks = () => {
   const classes = workStyles();
-
-  const [expanded, setExpanded] = useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
   
   return ( 
     <div className={classes.root} id="hworks">
       <h1 id="title">¿Cómo funciona?</h1>
       <Grid container direction="row" justify="space-around" alignItems="center" spacing={3}>
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
-            <CardMedia className={classes.media} image={img1} title="Paella dish"/>
-            <CardContent>
-              <Typography variant="body2" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac mi at metus iaculis tristique.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMore />
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <motion.div whileHover={{ scale: 1.07 }}>
+            <Card className={classes.card}>
+              <CardMedia className={classes.media} image={python} title="Python script"/>
+              <hr style={{background: '#FFFFFF', width: '90%'}}/>
               <CardContent>
-                <Typography paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac mi at metus iaculis tristique. 
-                  Pellentesque eget dui eu nisl eleifend imperdiet sollicitudin et lectus. 
-                  Praesent interdum auctor magna eu interdum. Integer a nunc arcu. In et vestibulum ante.
+                <Typography gutterBottom variant="h5" component="h2">
+                  Script de python
+                </Typography>
+                <Typography variant="body2" component="p">
+                  Spript realizado dentro del framework pycerver el cual nos permite tener información actualizada relacionada 
+                  con le precio del bitcoin. 
                 </Typography>
               </CardContent>
-            </Collapse>
-          </Card>
+            </Card>
+
+          </motion.div>
         </Grid>
+
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
-            <CardMedia className={classes.media} image={img1} title="Paella dish"/>
-            <CardContent>
-              <Typography variant="body2" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac mi at metus iaculis tristique.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMore />
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <motion.div whileHover={{ scale: 1.07 }}>
+            <Card className={classes.card}>
+              <CardMedia className={classes.media} image={web} title="Web page"/>
+              <hr style={{background: '#FFFFFF', width: '90%'}}/>
               <CardContent>
-                <Typography paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac mi at metus iaculis tristique. 
-                  Pellentesque eget dui eu nisl eleifend imperdiet sollicitudin et lectus. 
-                  Praesent interdum auctor magna eu interdum. Integer a nunc arcu. In et vestibulum ante.
+                <Typography gutterBottom variant="h5" component="h2">
+                  Página web
+                </Typography>
+                <Typography variant="body2" component="p">
+                  Esta página está diseñada para ser utilizada por cualquier persona siendo intuitiva y fácil de usar.
                 </Typography>
               </CardContent>
-            </Collapse>
-          </Card>
+            </Card>
+          </motion.div>
         </Grid>
+
         <Grid item xs={6} sm={3}>
-          <Card className={classes.card}>
-            <CardMedia className={classes.media} image={img1} title="Paella dish"/>
-            <CardContent>
-              <Typography variant="body2" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac mi at metus iaculis tristique.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton
-                className={clsx(classes.expand, {
-                  [classes.expandOpen]: expanded,
-                })}
-                onClick={handleExpandClick}
-                aria-expanded={expanded}
-                aria-label="show more"
-              >
-                <ExpandMore />
-              </IconButton>
-            </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <motion.div whileHover={{ scale: 1.07 }}>
+            <Card className={classes.card}>
+              <CardMedia className={classes.media} image={monitor} title="Monitor"/>
+              <hr style={{background: '#FFFFFF', width: '90%'}}/>
               <CardContent>
-                <Typography paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac mi at metus iaculis tristique. 
-                  Pellentesque eget dui eu nisl eleifend imperdiet sollicitudin et lectus. 
-                  Praesent interdum auctor magna eu interdum. Integer a nunc arcu. In et vestibulum ante.
+                <Typography gutterBottom variant="h5" component="h2">
+                  Monitorea el bitcoin
+                </Typography>
+                <Typography variant="body2" component="p">
+                  Gracias al trbajo en conjunto del script de python y con la página web cualquiera podrá monitorear el precio
+                  y recibir alertas en tiempo real de cuando es el momento preciso para comprar o vender.
                 </Typography>
               </CardContent>
-            </Collapse>
-          </Card>
+            </Card>
+          </motion.div>
         </Grid>
       </Grid>
     </div>

@@ -5,9 +5,11 @@ export const workStyles = makeStyles((theme) => ({
     width: '100%'
   },
   card: {
-    maxWidth: 345,
+    maxWidth: '345px',
     color: '#ffffff',
-    backgroundColor: '#232041'
+    backgroundColor: '#232041',
+    borderRadius: '1em',
+    minHeight: '390px'
   },
   media: {
     height: 0,
