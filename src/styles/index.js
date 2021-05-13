@@ -38,18 +38,24 @@ export const btcStyles = makeStyles(() => ({
   },
   alertsCard: {
     height: '500px',
+    maxHeight: '500px',
     color: '#ffffff',
     backgroundColor: '#232041',
     borderRadius: "12px",
   },
-  alertSuccess: {
+  alertBuy: {
     width: '100%',
-    color: '#ffffff',
-    backgroundColor: '#02c076'
+    color: '#02c076',
   },
-  alertDanger: {
+  alertSell: {
     width: '100%',
-    color: '#ffffff',
-    backgroundColor: '#ff4265'
+    color: '#ff4265',
+  },
+  text: {
+    color: '#ffffff'
+  },
+  alert: {
+    color: '#232041',
+    textAlign: 'center'
   }
 }));

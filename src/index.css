@@ -116,3 +116,27 @@ code {
   color: #efb810;
   text-decoration: none;
 }
+
+.alert-buy {
+	background: linear-gradient(to right, #232041 50%, #02c076 50%) left;
+	background-size: 400% 400%;
+	animation: gradient 5s ease-in;
+}
+
+.alert-sell {
+	background: linear-gradient(to right, #232041 50%, #ff4265 50%) left;
+	background-size: 400% 400%;
+	animation: gradient 5s ease-in;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
