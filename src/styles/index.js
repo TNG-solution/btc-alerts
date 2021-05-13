@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from "@material-ui/core";
 
 export const workStyles = makeStyles((theme) => ({
   root: {
@@ -59,3 +60,20 @@ export const btcStyles = makeStyles(() => ({
     textAlign: 'center'
   }
 }));
+
+export const exchangeCard = makeStyles(() => ({
+  avatar: {
+    width: 50,
+    height: 50,
+  },
+}));
+
+export const theme = createMuiTheme({
+  overrides: {
+    MuiCardContent: {
+      root: {
+        paddingTop: 0
+      }
+    }
+  }
+})
