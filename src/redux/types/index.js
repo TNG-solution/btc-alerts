@@ -1,0 +1,6 @@
+// EXCHANGES
+export const GET_EXCHANGES = 'GET_EXCHANGES';
+export const GET_EXCHANGES_ERROR = 'GET_EXCHANGES_ERROR';
+
+// UI
+export const UI_LOADING = 'UI_LOADING'
