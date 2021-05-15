@@ -24,6 +24,7 @@ const Btc = () => {
 
   const exchanges = useSelector(state => state.exchanges.exchanges);
   const loading = useSelector(state => state.exchanges.loading);
+  const error = useSelector(state => state.exchanges.error)
 
   useEffect(() => {
     const getExchanges = () => dispatch(get_exchanges());
@@ -52,7 +53,7 @@ const Btc = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.3, duration: 1.3 }}
                 >
-                  <Exchange key={item.name} exchange={item} loading={loading}/>
+                  <Exchange key={item.name} exchange={item} loading={loading} error={error}/>
                 </motion.div>
               </Grid>
             ))
