@@ -63,8 +63,19 @@ export const btcStyles = makeStyles(() => ({
 
 export const exchangeCard = makeStyles(() => ({
   avatar: {
-    width: 50,
-    height: 50,
+    width: 35,
+    height: 35,
+  },
+  error: {
+    width: 250,
+    height: 120,
+    backgroundColor: 'white',
+    color: 'black',
+    borderRadius: '1em',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    textAlign: 'center'
   },
 }));
 
