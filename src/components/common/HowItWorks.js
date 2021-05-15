@@ -17,7 +17,7 @@ const HowItWorks = () => {
   
   return ( 
     <div className={classes.root} id="hworks">
-      <h1 id="title">¿Cómo funciona?</h1>
+      <h1 style={{ paddingTop: '80px', marginTop: '-80px' }} id="title">¿Cómo funciona?</h1>
       <Grid container direction="row" justify="space-around" alignItems="center" spacing={3}>
         <Grid item xs={6} sm={3}>
           <motion.div whileHover={{ scale: 1.07 }}>
