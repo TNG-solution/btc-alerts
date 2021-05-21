@@ -30,7 +30,7 @@ const HowItWorks = () => {
                 </Typography>
                 <Typography variant="body2" component="p">
                   Spript realizado dentro del framework pycerver el cual nos permite tener información actualizada relacionada 
-                  con le precio del bitcoin. 
+                  con el precio del bitcoin. 
                 </Typography>
               </CardContent>
             </Card>
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                   Monitorea el bitcoin
                 </Typography>
                 <Typography variant="body2" component="p">
-                  Gracias al trbajo en conjunto del script de python y con la página web cualquiera podrá monitorear el precio
+                  Gracias al trabajo en conjunto del script de python y con la página web cualquiera podrá monitorear el precio
                   y recibir alertas en tiempo real de cuando es el momento preciso para comprar o vender.
                 </Typography>
               </CardContent>
