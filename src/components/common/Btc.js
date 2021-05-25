@@ -5,7 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { get_exchanges } from '../../redux/actions/exchangesActions';
 
 // Material UI
-import { Grid, Card, CardHeader, List, ListItem, ListItemText, Divider, Typography } from '@material-ui/core';
+import { Grid, Card, CardHeader, CardContent, Typography } from '@material-ui/core';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { btcStyles } from '../../styles/index';
 
 // Packages
@@ -14,6 +16,9 @@ import { motion } from 'framer-motion';
 
 // Components
 import Exchange from './Exchange';
+
+// Images
+import btc from '../../images/btc-logo.png';
 
 const Btc = () => {
   const dispatch = useDispatch();
@@ -63,7 +68,6 @@ const Btc = () => {
       
       <Grid container direction="row" justify="space-around" alignItems="center" spacing={3}>
         <Grid item xs={8}>
-          <button type="button" onClick={onClick}>click</button>
           <Card className={classes.card}>
             <TradingViewWidget
               symbol="BITBAY:BTCUSD"
@@ -76,57 +80,17 @@ const Btc = () => {
           </Card>
         </Grid>
 
-        {/* TODO: alertas de bitcoin */}
+        {/* TODO: precio, porcentaje de cambio (multiplicar * 100) api/btc/prediction */}
         <Grid item xs={3}>
           <Card className={classes.alertsCard}>
-            <CardHeader title="Alertas"/>
-            <List>
-              {buy
-                ? <ListItem className="alert-buy">
-                    <ListItemText
-                      primary={
-                        <Fragment>
-                          <Typography variant="h5" className={classes.alert}>¡Es hora de comprar!</Typography>
-                        </Fragment>
-                      }
-                    />
-                  </ListItem>
-                : <ListItem className={classes.alertBuy}>
-                    <ListItemText primary="Compra Bitcoin" 
-                      secondary={
-                        <Fragment>
-                          <Typography component="span" variant="body2" className={classes.text}>
-                            Puedes hacerlo desde tu wallet preferida.
-                          </Typography>
-                        </Fragment>
-                      }
-                    />
-                  </ListItem>
-              }
-              <Divider/>
-              {sell
-                ? <ListItem className="alert-sell">
-                    <ListItemText
-                      primary={
-                        <Fragment>
-                          <Typography variant="h5" className={classes.alert}>¡Es hora de vender!</Typography>
-                        </Fragment>
-                      }
-                    />
-                  </ListItem>
-                : <ListItem className={classes.alertSell}>
-                    <ListItemText primary="Vende Bitcoin" 
-                      secondary={
-                        <Fragment>
-                          <Typography component="span" variant="body2" className={classes.text}>
-                            Puedes hacerlo desde tu wallet preferida.
-                          </Typography>
-                        </Fragment>
-                      }
-                    />
-                  </ListItem>
-              }
-            </List>
+            <CardHeader className="text-center" title="Predicción para mañana"/>
+            <CardContent>
+              <Typography className="mt-3" variant="h6"> <img src={btc} height="25px" width="43px"/> Bitcoin</Typography>
+              <Typography className="mt-3" variant="h6">Precio: $ 38000 <small>USD</small></Typography>
+              <Typography className="mt-3" variant="h6">
+                % de cambio: <ArrowDropUpIcon/> <ArrowDropDownIcon/> 6.23%
+              </Typography>
+            </CardContent>
           </Card>
         </Grid>
       </Grid>
