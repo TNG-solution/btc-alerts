@@ -67,15 +67,17 @@ const Btc = () => {
           </Card>
         </Grid>
 
-        {/* TODO: precio, porcentaje de cambio (multiplicar * 100) api/btc/prediction */}
         <Grid item xs={3}>
           <Card className={classes.alertsCard}>
             <CardHeader className="text-center" title="Predicción para mañana"/>
             <CardContent>
               <Typography className="mt-3" variant="h6"> <img src={btc} height="25px" width="43px" alt="Bitcoin logo"/> Bitcoin</Typography>
-              <Typography className="mt-3" variant="h6">Precio: $ 38000 <small>USD</small></Typography>
               <Typography className="mt-3" variant="h6">
-                % de cambio: <ArrowDropUpIcon/> <ArrowDropDownIcon/> 6.23%
+                Precio: $ {prediction.prediction === undefined ? '' : prediction.prediction.toFixed(2)} <small>USD</small>
+              </Typography>
+              <Typography className="mt-3" variant="h6">
+                Cambio: {prediction.variant * -1 < 0 ? <ArrowDropDownIcon style={{color: "#ff4265"}}/> : <ArrowDropUpIcon style={{color: "#02c076"}}/>}
+                {prediction.variant === undefined ? '' : (prediction.variant * -100).toFixed(2)}%
               </Typography>
             </CardContent>
           </Card>
