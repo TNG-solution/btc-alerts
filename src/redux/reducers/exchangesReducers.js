@@ -1,12 +1,15 @@
 import {
   GET_EXCHANGES,
   GET_EXCHANGES_ERROR,
-  UI_LOADING
+  UI_LOADING,
+  GET_PREDICTION,
+  GET_PREDICTION_ERROR
 } from '../types/index';
 
 const initialState = {
   loading: false,
   exchanges: [],
+  prediction: [],
   error: {
     isError: false,
     msg: ""
@@ -23,10 +26,22 @@ export default function reducer(state = initialState, action){
     case GET_EXCHANGES:
       return {
         ...state,
-        loading: false,
         exchanges: action.payload
       }
     case GET_EXCHANGES_ERROR:
+      return {
+        ...state,
+        error: {
+          isError: true, msg: action.payload
+        }
+      }
+    case GET_PREDICTION:
+      return {
+        ...state,
+        loading: false,
+        prediction: action.payload
+      }
+    case GET_PREDICTION_ERROR:
       return {
         ...state,
         loading: false,

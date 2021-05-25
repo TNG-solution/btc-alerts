@@ -1,7 +1,9 @@
 import {
   GET_EXCHANGES,
   GET_EXCHANGES_ERROR,
-  UI_LOADING
+  UI_LOADING,
+  GET_PREDICTION,
+  GET_PREDICTION_ERROR
 } from '../types/index';
 
 import Axios from 'axios';
@@ -75,11 +77,6 @@ const addExchanges = (binance, bitso, coinbase, crypto) => {
 }
 
 export const get_exchanges = () => dispatch => {
-  dispatch({
-    type: UI_LOADING,
-    payload: true
-  });
-
   let binance = 'https://api.coingecko.com/api/v3/exchanges/binance';
   let bitso = 'https://api.coingecko.com/api/v3/exchanges/bitso';
   let coinbase = 'https://api.coingecko.com/api/v3/exchanges/gdax';
@@ -108,5 +105,28 @@ export const get_exchanges = () => dispatch => {
       type: GET_EXCHANGES_ERROR,
       payload: err.message
     });
+  })
+}
+
+export const get_prediction = () => dispatch => {
+  dispatch({
+    type: UI_LOADING,
+    payload: true
+  });
+
+  Axios.get("/api/btc/prediction")
+  .then((res) => {
+    console.log(res.data)
+
+    // dispatch({
+    //   type: GET_PREDICTION,
+    //   payload: exchanges
+    // });
+  }).catch(err => {
+    console.log(err);
+    // dispatch({
+    //   type: GET_PREDICTION_ERROR,
+    //   payload: err.message
+    // });
   })
 }
