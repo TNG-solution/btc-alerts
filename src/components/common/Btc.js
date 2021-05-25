@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // Redux
-import { get_exchanges } from '../../redux/actions/exchangesActions';
+import { get_exchanges, get_prediction } from '../../redux/actions/exchangesActions';
 
 // Material UI
 import { Grid, Card, CardHeader, CardContent, Typography } from '@material-ui/core';
@@ -27,11 +27,11 @@ const Btc = () => {
   const exchanges = useSelector(state => state.exchanges.exchanges);
   const loading = useSelector(state => state.exchanges.loading);
   const error = useSelector(state => state.exchanges.error)
+  const prediction = useSelector(state => state.exchanges.prediction);
 
   useEffect(() => {
-    // const getExchanges = () => dispatch(get_exchanges());
-    // getExchanges();
     dispatch(get_exchanges());
+    dispatch(get_prediction());
   }, [dispatch]);
 
   return (
