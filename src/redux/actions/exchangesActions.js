@@ -9,7 +9,7 @@ import Axios from 'axios';
 const getPrice = (exchange) => {
   let price = 0;
 
-  exchange.tickers.map(item => {
+  exchange.tickers.forEach(item => {
     if(item.base === "BTC" && item.target === "USDT"){
       price = item.last;
     }
@@ -21,7 +21,7 @@ const getPrice = (exchange) => {
 const getPriceBitso = (exchange) => {
   let price = 0;
 
-  exchange.tickers.map(item => {
+  exchange.tickers.forEach(item => {
     if(item.base === "BTC" && item.target === "USD"){
       price = item.last;
     }
