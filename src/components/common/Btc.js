@@ -32,8 +32,9 @@ const Btc = () => {
   const error = useSelector(state => state.exchanges.error)
 
   useEffect(() => {
-    const getExchanges = () => dispatch(get_exchanges());
-    getExchanges();
+    // const getExchanges = () => dispatch(get_exchanges());
+    // getExchanges();
+    dispatch(get_exchanges());
   }, [dispatch]);
 
   const onClick = (e) => {
@@ -66,7 +67,7 @@ const Btc = () => {
           }
       </Grid>
       
-      <Grid container direction="row" justify="space-around" alignItems="center" spacing={3}>
+      <Grid className="mt-3" container direction="row" justify="space-around" alignItems="center" spacing={3}>
         <Grid item xs={8}>
           <Card className={classes.card}>
             <TradingViewWidget
