@@ -29,7 +29,7 @@ const Btc = () => {
   useEffect(() => {
     const getExchanges = () => dispatch(get_exchanges());
     getExchanges();
-  }, []);
+  }, [dispatch]);
 
   const onClick = (e) => {
     e.preventDefault();
