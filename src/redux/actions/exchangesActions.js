@@ -116,17 +116,16 @@ export const get_prediction = () => dispatch => {
 
   Axios.get("/api/btc/prediction")
   .then((res) => {
-    console.log(res.data)
-
-    // dispatch({
-    //   type: GET_PREDICTION,
-    //   payload: exchanges
-    // });
+    // console.log(res.data)
+    dispatch({
+      type: GET_PREDICTION,
+      payload: res.data
+    });
   }).catch(err => {
-    console.log(err);
-    // dispatch({
-    //   type: GET_PREDICTION_ERROR,
-    //   payload: err.message
-    // });
+    // console.log(err);
+    dispatch({
+      type: GET_PREDICTION_ERROR,
+      payload: err.message
+    });
   })
 }
