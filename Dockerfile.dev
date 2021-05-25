@@ -1,0 +1,9 @@
+FROM node:alpine
+
+WORKDIR '/home/client'
+
+COPY ./package.json .
+
+CMD ["npm", "run", "start"]
+
+
