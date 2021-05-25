@@ -65,8 +65,8 @@ const HowItWorks = () => {
                   Monitorea el bitcoin
                 </Typography>
                 <Typography variant="body2" component="p">
-                  Gracias al trabajo en conjunto del script de python y con la página web cualquiera podrá monitorear el precio
-                  y recibir alertas en tiempo real de cuando es el momento preciso para comprar o vender.
+                  Gracias al trabajo en conjunto del script de python con la página web cualquiera podrá obtener una predicción
+                  del precio del bitcoin para un día después y saber si es el momento preciso para comprar o vender.
                 </Typography>
               </CardContent>
             </Card>
