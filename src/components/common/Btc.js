@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // Redux
@@ -24,9 +24,6 @@ const Btc = () => {
   const dispatch = useDispatch();
   const classes = btcStyles();
 
-  const [sell, setSell] = useState(false);
-  const [buy, setBuy] = useState(false);
-
   const exchanges = useSelector(state => state.exchanges.exchanges);
   const loading = useSelector(state => state.exchanges.loading);
   const error = useSelector(state => state.exchanges.error)
@@ -36,17 +33,6 @@ const Btc = () => {
     // getExchanges();
     dispatch(get_exchanges());
   }, [dispatch]);
-
-  const onClick = (e) => {
-    e.preventDefault();
-
-    setBuy(true); 
-    setSell(true); 
-    setTimeout(() => {
-      setBuy(false); 
-      setSell(false);
-    }, 4700);
-  }
 
   return (
     <div className={classes.root}>
@@ -86,7 +72,7 @@ const Btc = () => {
           <Card className={classes.alertsCard}>
             <CardHeader className="text-center" title="Predicción para mañana"/>
             <CardContent>
-              <Typography className="mt-3" variant="h6"> <img src={btc} height="25px" width="43px"/> Bitcoin</Typography>
+              <Typography className="mt-3" variant="h6"> <img src={btc} height="25px" width="43px" alt="Bitcoin logo"/> Bitcoin</Typography>
               <Typography className="mt-3" variant="h6">Precio: $ 38000 <small>USD</small></Typography>
               <Typography className="mt-3" variant="h6">
                 % de cambio: <ArrowDropUpIcon/> <ArrowDropDownIcon/> 6.23%
