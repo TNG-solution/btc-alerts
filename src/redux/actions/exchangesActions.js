@@ -5,6 +5,7 @@ import {
 } from '../types/index';
 
 import Axios from 'axios';
+import coinbaseImg from '../../images/coinbase.svg';
 
 const getPrice = (exchange) => {
   let price = 0;
@@ -38,7 +39,6 @@ const addExchanges = (binance, bitso, coinbase, crypto) => {
     url: binance.url,
     price: getPrice(binance),
     image: binance.image,
-    // bg: '#12161C',
     bg: '#040703',
     color: '#FFFFFF'
   };
@@ -51,13 +51,12 @@ const addExchanges = (binance, bitso, coinbase, crypto) => {
   };
 
   let coinbaseInfo = {
-    name: coinbase.name,
+    name: "Coinbase",
     url: coinbase.url,
     price: getPrice(coinbase),
-    image: coinbase.image,
-    // bg: '#56B4FC',
-    // bg: '#0561c1',
-    bg: '#075AB5',
+    // image: coinbase.image,
+    image: coinbaseImg,
+    bg: '#005bf7',
     color: '#FFFFFF'
   };
 
